@@ -1,31 +1,34 @@
 # Develop and Quck Start Guide
 
 
-First to setting variables `.env` from `.env.example`
+Сначала нужно установить переменную
+ `.env` from `.env.example`
 
 ```bash
-# run once at the start of work
+# запустить сразу после начала работы
+
 make setup
 
-# run every time migrations changes?
+# Запускать каждый раз, когда изменяются перемещения?
+
 make up
 
-# start local server (outside docker) for develop
+# запустить локальный сервер (вне docker) для разработки
 # make run-local
 
-# start server in docker infra
-# use command for restart server after changes
+# запуск сервера в docker infra
+# команду для перезапуска сервера после изменений
 make run-docker
 
-# run once at setup SSL for domain
+# запустить один раз при настройке SSL для домена
 make initial-setup-ssl
-# Should be an `Exit 0` for the certbot container - means that the certificate has been installed successfully
+# Должен быть `Exit 0` для контейнера certbot - означает, что сертификат был успешно установлен
 #
 # MacBook-Pro-George:semdict gebv$ docker-compose ps | grep certbot
 # certbot               certbot certonly --webroot ...   Exit 0
 # MacBook-Pro-George:semdict gebv$
 
-# start reverse proxy with configured ssl
+# запуск обратного прокси с настроенным ssl
 make run-proxy
 ```
 
