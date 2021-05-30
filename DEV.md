@@ -22,8 +22,8 @@ make run-docker
 
 # запустить один раз при настройке SSL для домена
 make initial-setup-ssl
-# Должен быть `Exit 0` для контейнера certbot - означает, что сертификат был успешно установлен
-#
+# Должен быть `Exit 0` для контейнера certbot - означает,
+# что сертификат был успешно установлен
 # MacBook-Pro-George:semdict gebv$ docker-compose ps | grep certbot
 # certbot               certbot certonly --webroot ...   Exit 0
 # MacBook-Pro-George:semdict gebv$
